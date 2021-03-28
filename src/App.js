@@ -10,9 +10,7 @@ import {
   FaFighterJet,
   FaGraduationCap,
   FaHtml5,
-  FaJava,
   FaJsSquare,
-  FaPython,
   FaReact,
   FaRegAddressCard,
   FaRegHandRock,
@@ -21,8 +19,6 @@ import {
 import { RiSeedlingLine, RiSunLine } from "react-icons/ri";
 import { FiBookOpen, FiMail, FiSmartphone } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
-import { SiMongodb } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
 
 const SKY = "#7b9acc";
 const GREY = "#ebebeb";
@@ -30,7 +26,6 @@ const GREY = "#ebebeb";
 const Container = styled.div`
   width: 840px;
   height: 1188px;
-  border: 1px solid lightgrey;
 `;
 
 const Main = styled.div`
@@ -172,11 +167,12 @@ const Section2 = styled.div`
     font-weight: 600;
   }
   .toy {
-    display: flex;
     .img-box {
+      display: flex;
+      justify-content: center;
       img {
         margin-top: 5px;
-        width: 185px;
+        width: 85%;
         margin-right: 5px;
       }
       div {
@@ -274,50 +270,30 @@ const App = () => {
         <Section2>
           <div className="wrapper">
             <div className="title">기술스택 / Technical Stack</div>
-            <div className="s-title">Usually Use</div>
             <div className="language">
               <div className="language-icon">
-                <FaHtml5 />
-                HTML
-              </div>
-              <div className="language-icon">
-                <FaCss3Alt />
-                <div>CSS</div>
+                <FaReact />
+                <div>React JS</div>
               </div>
               <div className="language-icon">
                 <FaJsSquare />
                 <div>JS</div>
               </div>
               <div className="language-icon">
-                <FaReact />
-                <div>React JS</div>
-              </div>
-            </div>
-            <div className="s-title">Tried Before</div>
-            <div className="language">
-              <div className="language-icon">
-                <FaJava />
-                Java
+                <FaCss3Alt />
+                <div>CSS</div>
               </div>
               <div className="language-icon">
-                <FaPython />
-                <div>Python</div>
-              </div>
-              <div className="language-icon">
-                <GrMysql />
-                <div>MySQL</div>
-              </div>
-              <div className="language-icon">
-                <SiMongodb />
-                <div>Mongo DB</div>
+                <FaHtml5 />
+                HTML
               </div>
             </div>
             <div className="title">토이프로젝트 / Toy Project</div>
-            <div className="toy-title">1. 개인 블로그</div>
-            <a href="https://github.com/Yuyeol/blog-react">
-              [포트폴리오 열기]
-            </a>{" "}
-            <a href="https://yuyeol.github.io/blog-react/#/">[페이지 열기]</a>
+            <div className="toy-title">
+              1. 개인 블로그{" "}
+              <a href="https://github.com/Yuyeol/blog-react">[포트폴리오]</a>{" "}
+              <a href="https://yuyeol.github.io/blog-react/#/">[웹페이지]</a>
+            </div>
             <div className="toy">
               <div className="img-box">
                 <img src={blog}></img>
@@ -327,13 +303,15 @@ const App = () => {
                 만들기
               </div>
             </div>
-            <div className="toy-title">2. 무비포스터 뷰어</div>
-            <a href="https://github.com/Yuyeol/themovie-react">
-              [포트폴리오 열기]
-            </a>{" "}
-            <a href="https://yuyeol.github.io/themovie-react/#/">
-              [페이지 열기]
-            </a>
+            <div className="toy-title">
+              2. 무비포스터 뷰어{" "}
+              <a href="https://github.com/Yuyeol/themovie-react">
+                [포트폴리오]
+              </a>{" "}
+              <a href="https://yuyeol.github.io/themovie-react/#/">
+                [웹페이지]
+              </a>
+            </div>
             <div className="toy">
               <div className="img-box">
                 <img src={movie}></img>
@@ -343,11 +321,14 @@ const App = () => {
                 제공
               </div>
             </div>
-            <div className="toy-title">3. 쇼핑몰 클론코딩</div>
-            <a href="https://github.com/Yuyeol/fashion-mall-ff">
-              [포트폴리오 열기]
-            </a>{" "}
-            <a href="https://yuyeol.github.io/fashion-mall-ff">[페이지 열기]</a>
+            <div className="toy-title">
+              3. 쇼핑몰 클론코딩{" "}
+              <a href="https://github.com/Yuyeol/fashion-mall-ff">
+                [포트폴리오]
+              </a>{" "}
+              <a href="https://yuyeol.github.io/fashion-mall-ff">[웹페이지]</a>
+            </div>
+
             <div className="toy">
               <div className="img-box">
                 <img src={mall}></img>
@@ -358,6 +339,9 @@ const App = () => {
             </div>
             <div className="title">기타정보 / More Info</div>
             <div className="etc-info etc-f">
+              <FaRegAddressCard /> 2020~ 자바스크립트 & 리액트 독학
+            </div>
+            <div className="etc-info">
               <FaRegAddressCard /> 2020. 08. 28 정보처리기사 자격증 취득
             </div>
             <div className="etc-info">
