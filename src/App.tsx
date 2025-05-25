@@ -6,28 +6,14 @@ function App() {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         position: "relative",
+        width: "100dvw",
+        height: "100dvh",
       }}
     >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "800px",
-          height: "100vh",
-        }}
-      >
-        <PDFViewer
-          width="100%"
-          height="100%"
-          style={{ border: "none" }}
-          showToolbar={false}
-        >
-          <ResumePDF />
-        </PDFViewer>
-      </div>
+      <PDFViewer width="100%" height="100%" showToolbar={false}>
+        <ResumePDF />
+      </PDFViewer>
       <PDFDownloadButton />
     </div>
   );
