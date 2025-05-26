@@ -1,42 +1,57 @@
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Font,
-} from "@react-pdf/renderer";
+import { Document, Page, StyleSheet, Font, View } from "@react-pdf/renderer";
+import Header from "./Header";
+import Intro from "./Intro";
+import Skills from "./Skills";
+import { COLORS } from "../constants";
+import Career from "./Career";
+import Etc from "./Etc";
 
 Font.register({
-  family: "SpoqaHanSans",
-  src: "https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.ttf",
+  family: "Pretendard",
+  fonts: [
+    {
+      src: "https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Light.woff",
+      fontWeight: 300,
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Regular.woff",
+      fontWeight: 400,
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Medium.woff",
+      fontWeight: 500,
+    },
+    {
+      src: "https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Bold.woff",
+      fontWeight: 700,
+    },
+  ],
 });
 
-// 스타일 정의
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: "column",
-    backgroundColor: "#FFFFFF",
-    fontFamily: "SpoqaHanSans",
-  },
-  headerContainer: {
-    backgroundColor: "lightgray",
-    borderBottomRightRadius: 25,
-  },
-  header: {
-    fontSize: 24,
-  },
-});
-
-// 이력서 컴포넌트
 const ResumePDF = () => (
   <Document>
     <Page size="A4" style={styles.page}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.header}>홍길동</Text>
+      <Header />
+      <View style={styles.mainContainer}>
+        <Intro />
+        <Career />
+        <Skills />
+        <Etc />
       </View>
     </Page>
   </Document>
 );
 
 export default ResumePDF;
+
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: "column",
+    backgroundColor: "white",
+    fontFamily: "Pretendard",
+    padding: 32,
+  },
+  mainContainer: {
+    color: COLORS.primary,
+  },
+});

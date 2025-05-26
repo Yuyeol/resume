@@ -14,13 +14,15 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
       document={<ResumePDF />}
       fileName={fileName}
       style={{
-        padding: "10px 20px",
-        backgroundColor: "#4CAF50",
+        padding: "5px 10px",
+        backgroundColor: "#007bff",
         color: "white",
         borderRadius: "4px",
         position: "fixed",
         right: "20px",
         bottom: "20px",
+        textDecoration: "none",
+        fontWeight: 700,
       }}
     >
       {({ loading }) => (loading ? "문서 생성 중..." : "PDF 다운로드")}
