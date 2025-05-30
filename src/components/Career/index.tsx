@@ -22,7 +22,7 @@ export default function Career() {
           "Next14 Approuter 채택하여 컴포넌트 단위 렌더링 제어 및 번들 최적화",
           "보유 차량 데이터 기반 Ai 추천 상담 기능 구현을 위한 RAG 환경 구축(GPT Embed, Pinecone)",
         ]}
-        techDocumentUrl="https://yuyeol.github.io/resume/careers/mycapage/react-query.md"
+        techDocumentUrl="https://yuyeol.github.io/resume/docs/react-query"
       />
       <Project
         title="KB차차차 촬영앱 유지보수"

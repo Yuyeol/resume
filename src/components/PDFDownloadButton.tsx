@@ -10,23 +10,47 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
   fileName = "이력서.pdf",
 }) => {
   return (
-    <PDFDownloadLink
-      document={<ResumePDF />}
-      fileName={fileName}
+    <div
       style={{
-        padding: "5px 10px",
-        backgroundColor: "#007bff",
-        color: "white",
-        borderRadius: "4px",
         position: "fixed",
         right: "20px",
         bottom: "20px",
-        textDecoration: "none",
-        fontWeight: 700,
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
       }}
     >
-      {({ loading }) => (loading ? "문서 생성 중..." : "PDF 다운로드")}
-    </PDFDownloadLink>
+      <PDFDownloadLink
+        document={<ResumePDF />}
+        fileName={fileName}
+        style={{
+          padding: "10px 15px",
+          backgroundColor: "#007bff",
+          color: "white",
+          borderRadius: "4px",
+          textDecoration: "none",
+          fontWeight: 700,
+          textAlign: "center",
+        }}
+      >
+        {({ loading }) => (loading ? "문서 생성 중..." : "PDF 다운로드")}
+      </PDFDownloadLink>
+
+      <a
+        href="/resume/docs/react-query"
+        style={{
+          padding: "10px 15px",
+          backgroundColor: "#28a745",
+          color: "white",
+          borderRadius: "4px",
+          textDecoration: "none",
+          fontWeight: 700,
+          textAlign: "center",
+        }}
+      >
+        기술 문서 보기
+      </a>
+    </div>
   );
 };
 
