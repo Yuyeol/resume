@@ -3,27 +3,27 @@ import SectionTitle from "./SectionTitle";
 
 const skillList = [
   {
-    icon: "/images/skills/react.png",
+    icon: "./images/skills/react.png",
     title: "React",
   },
   {
-    icon: "/images/skills/next.png",
+    icon: "./images/skills/next.png",
     title: "Next.js",
   },
   {
-    icon: "/images/skills/typescript.png",
+    icon: "./images/skills/typescript.png",
     title: "TypeScript",
   },
   {
-    icon: "/images/skills/tailwind.png",
+    icon: "./images/skills/tailwind.png",
     title: "Tailwind",
   },
   {
-    icon: "/images/skills/zustand.png",
+    icon: "./images/skills/zustand.png",
     title: "Zustand",
   },
   {
-    icon: "/images/skills/reactquery.png",
+    icon: "./images/skills/reactquery.png",
     title: "ReactQuery",
   },
 ];

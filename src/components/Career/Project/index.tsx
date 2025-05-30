@@ -22,14 +22,14 @@ export default function Project({
       <View style={styles.projectContentContainer}>
         <View style={styles.projectContentTeamInfoContainer}>
           <Image
-            src={"/images/icons/team.png"}
+            src={"./images/icons/team.png"}
             style={styles.projectContentTeamInfoIcon}
           />
           <Text style={styles.projectContentTeamInfoText}>{team}</Text>
         </View>
         <View style={styles.projectContentTeamInfoContainer}>
           <Image
-            src={"/images/icons/tool.png"}
+            src={"./images/icons/tool.png"}
             style={styles.projectContentTeamInfoIcon}
           />
           <Text style={styles.projectContentTeamInfoText}>{skills}</Text>

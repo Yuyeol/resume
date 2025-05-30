@@ -27,7 +27,7 @@ export default function Header() {
       <View style={styles.container}>
         <View style={styles.profileContainer}>
           <View style={styles.profileImageContainer}>
-            <Image src="/images/profile.jpeg" style={styles.profileImage} />
+            <Image src="./images/profile.jpeg" style={styles.profileImage} />
           </View>
           <View style={styles.MainInfoContainer}>
             <Text style={styles.MainInfoTitle}>정유열</Text>
