@@ -9,5 +9,5 @@ export default function BulletList({
 }
 
 const styles = StyleSheet.create({
-  bulletList: { gap: 4 },
+  bulletList: { gap: 4, break: false },
 });

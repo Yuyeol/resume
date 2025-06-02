@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "@react-pdf/renderer";
 
 export default function BulletItem({ content }: { content: React.ReactNode }) {
   return (
-    <View style={styles.bulletItem}>
+    <View style={styles.bulletItem} wrap={false}>
       <Text style={styles.bullet}>•</Text>
       <Text style={styles.bulletContent}>{content}</Text>
     </View>

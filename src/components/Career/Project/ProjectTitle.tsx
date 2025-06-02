@@ -19,11 +19,11 @@ export default function ProjectTitle({
 const styles = StyleSheet.create({
   container: { width: 160 },
   title: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "bold",
   },
   period: {
-    fontSize: 12,
+    fontSize: 10,
     color: COLORS.muted,
   },
 });
