@@ -41,13 +41,14 @@ function App() {
           loading={<div style={{ width: 0, height: 0 }} />}
         >
           {Array.from(new Array(numPages), (_, index) => (
-            <Page
-              key={`page_${index + 1}`}
-              pageNumber={index + 1}
-              renderTextLayer={false}
-              renderAnnotationLayer={false}
-              loading={<div style={{ width: 0, height: 0 }} />}
-            />
+            <div key={`page_${index + 1}`} style={{ border: "1px solid #ddd" }}>
+              <Page
+                pageNumber={index + 1}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+                loading={<div style={{ width: 0, height: 0 }} />}
+              />
+            </div>
           ))}
         </Document>
       )}
