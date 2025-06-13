@@ -7,7 +7,7 @@ interface PDFDownloadButtonProps {
 }
 
 const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
-  fileName = "이력서.pdf",
+  fileName = "정유열 이력서.pdf",
 }) => {
   return (
     <PDFDownloadLink
@@ -25,7 +25,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
         fontWeight: 700,
       }}
     >
-      "PDF 다운로드"
+      PDF 다운로드
     </PDFDownloadLink>
   );
 };

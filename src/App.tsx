@@ -41,7 +41,7 @@ function App() {
           loading={<div style={{ width: 0, height: 0 }} />}
         >
           {Array.from(new Array(numPages), (_, index) => (
-            <div key={`page_${index + 1}`} style={{ border: "1px solid #ddd" }}>
+            <div key={`page_${index + 1}`} style={{ marginBottom: "10px" }}>
               <Page
                 pageNumber={index + 1}
                 renderTextLayer={false}
