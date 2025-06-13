@@ -5,6 +5,7 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import ResumePDF from "./components/ResumePDF";
 import PDFDownloadButton from "./components/PDFDownloadButton";
+import { isMobile } from "react-device-detect";
 
 function App() {
   const [pdfFile, setPdfFile] = useState<Blob | null>(null);
@@ -29,16 +30,23 @@ function App() {
         width: "100vw",
         height: "100vh",
         overflowY: "auto",
+        display: isMobile ? undefined : "flex",
+        justifyContent: isMobile ? undefined : "center",
       }}
     >
       {pdfFile && (
-        <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
+        <Document
+          file={pdfFile}
+          onLoadSuccess={onDocumentLoadSuccess}
+          loading={<div style={{ width: 0, height: 0 }} />}
+        >
           {Array.from(new Array(numPages), (_, index) => (
             <Page
               key={`page_${index + 1}`}
               pageNumber={index + 1}
               renderTextLayer={false}
               renderAnnotationLayer={false}
+              loading={<div style={{ width: 0, height: 0 }} />}
             />
           ))}
         </Document>

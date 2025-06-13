@@ -25,7 +25,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
         fontWeight: 700,
       }}
     >
-      {({ loading }) => (loading ? "문서 생성 중..." : "PDF 다운로드")}
+      "PDF 다운로드"
     </PDFDownloadLink>
   );
 };
