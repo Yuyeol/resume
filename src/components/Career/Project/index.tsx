@@ -22,8 +22,8 @@ export default function Project({
       <View style={styles.projectContentContainer}>
         <ProjectInfo infoName="team" text={team} />
         <ProjectInfo infoName="tool" text={skills} />
-        {descripttions.map((description: string) => (
-          <BulletItem content={<Text>{description}</Text>} />
+        {descripttions.map((description: string, index: number) => (
+          <BulletItem key={index} content={<Text>{description}</Text>} />
         ))}
       </View>
     </View>

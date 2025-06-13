@@ -36,7 +36,7 @@ export default function Header() {
           </View>
           <View style={styles.subInfoContainer}>
             {ItemInfos.map((item) => (
-              <View style={styles.subInfoItem}>
+              <View style={styles.subInfoItem} key={item.title}>
                 <Text style={styles.subInfoItemTitle}>{item.title}</Text>
 
                 {item.title === "Github" || item.title === "Blog" ? (
