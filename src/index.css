@@ -12,3 +12,8 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.react-pdf__Page__annotations a:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

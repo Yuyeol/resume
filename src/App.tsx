@@ -44,8 +44,8 @@ function App() {
             <div key={`page_${index + 1}`} style={{ marginBottom: "10px" }}>
               <Page
                 pageNumber={index + 1}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
+                renderTextLayer={true}
+                renderAnnotationLayer={true}
                 loading={<div style={{ width: 0, height: 0 }} />}
               />
             </div>
