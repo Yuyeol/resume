@@ -14,7 +14,7 @@ export default function CompanyTitle({
 }) {
   return (
     <View style={[styles.container, { marginTop: isFirst ? 0 : 10 }]}>
-      <View style={styles.titleContainer}>
+      <View style={styles.titleContainer} wrap={false}>
         <View style={styles.titleBullet}></View>
         <Text style={styles.title}>{title}</Text>
       </View>
