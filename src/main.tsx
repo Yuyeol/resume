@@ -6,7 +6,9 @@ import App from "./App.tsx";
 import { pdfjs } from "react-pdf";
 
 // 1. Buffer 폴리필 추가
-globalThis.Buffer = Buffer;
+if (typeof window !== "undefined") {
+  (window as unknown as { Buffer: typeof Buffer }).Buffer = Buffer;
+}
 
 // 2. 워커 경로 수정
 pdfjs.GlobalWorkerOptions.workerSrc = `${
